@@ -9,7 +9,8 @@ public class Attendence {
 
     public Attendence() {
         studentRecords = new HashMap<>();
-        attendenceOrder = new LinkedList<>();
+        attendenceOrder = 
+        new LinkedList<>();
         presentStudents = new HashSet<>();
         attendenceHistory = new Stack<>();
     }
@@ -25,6 +26,10 @@ public class Attendence {
     }
 
     public void showRecords() {
+        if (studentRecords.isEmpty()) {
+    System.out.println("No students added yet!");
+    return;
+}
         for (String num : studentRecords.keySet()) {
             System.out.println(num + " : " + studentRecords.get(num));
         }

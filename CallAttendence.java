@@ -11,10 +11,10 @@ public class CallAttendence {
         do {
             System.out.println("\n------ Select Option ------");
             System.out.println("1 : Add Student To Record");
-            System.out.println("2 : Mark Student Attendance");
-            System.out.println("3 : Show Attendance");
-            System.out.println("4 : Undo Last Attendance");
-            System.out.println("5 : Show Student Records");
+            System.out.println("2 : Show Student Records");
+            System.out.println("3 : Mark Student Attendance");
+            System.out.println("4 : Show Attendance");
+            System.out.println("5 : Undo Last Attendance");
             System.out.println("6 : Exit Attendance");
             System.out.print("Choice: ");
 
@@ -32,20 +32,20 @@ public class CallAttendence {
                     break;
 
                 case 2:
+                    student.showRecords();
+                    break;
+
+                case 3:
                     System.out.print("Enter Student ID: ");
                     student.markAttendence(sc.nextLine());
                     break;
 
-                case 3:
+                case 4:
                     student.displayAttendance();
                     break;
 
-                case 4:
-                    student.unmarkAttendence();
-                    break;
-
                 case 5:
-                    student.showRecords();
+                   student.unmarkAttendence();
                     break;
 
                 case 6:
